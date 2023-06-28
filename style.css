@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 150px;
+  justify-items: center;
+  padding: 0px 10px;
+}
+
+/* header design */
+header {
+  width: 100%;
+  background-color: rgb(250, 175, 37);
+  color: rgb(255, 255, 255);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-style: italic;
+  text-shadow: 3px 4px 2px black;
+  margin-bottom: 10px;
+}
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 3px;
+}
+img {
+  width: 100%;
+}
+footer {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 175, 37);
+  cursor: default;
+  gap: 10px;
+  text-align: center;
+}
+
+/* classes */
+.headings {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/5;
+  cursor: pointer;
+}
+.headings > img {
+  height: 80%;
+  border-radius: 5px;
+}
+.articles {
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.articles > img {
+  border-radius: 5px;
+  height: 80%;
+  transition: height 0.1s ease;
+}
+.articles:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+.articles:hover > h3 {
+  text-decoration: underline;
+}
+.articles:hover > img {
+  height: 81%;
+}
+
+.accounts {
+  display: flex;
+  gap: 20px;
+  height: 50%;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+ul > li > a {
+  font-size: 150%;
+  color: black;
+}
+ul > li > a :hover {
+  color: rgb(0, 0, 252, 0.6);
+}
+a > i {
+  transition: all 0.7s ease;
+}
+/* tablet */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 10px;
+    gap: 10px;
+  }
+  .headings {
+    grid-column: 1/3;
+  }
+  .articles {
+    height: fit-content;
+  }
+}
